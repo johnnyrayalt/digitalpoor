@@ -1,0 +1,75 @@
+.beer-list-container, .add-beer-container {
+  margin: auto;
+}
+
+.beer-list-container, .single-beer, .single-beer-information, .add-beer-container {
+  width: 85%;
+}
+
+.beer-header-info {
+  width:100%;
+}
+
+.single-beer-information {
+  margin-bottom: 20px;
+}
+
+.single-beer-name {
+    width:80%;
+}
+.single-beer-price {
+  text-align:right;
+  width: 20%;
+}
+
+.single-beer-properties-list-container {
+  width: 100%;
+}
+
+.single-beer-properties-list {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.single-beer-properties-list li {
+  float: left;
+  text-align: center;
+  width: 25%; /* fallback for non-calc() browsers */
+  list-style: none;
+}
+
+.float-right {
+  text-align: right;
+  width:50%;
+}
+.format-right {
+  text-align:right !important;
+  margin-right:0;
+}
+
+.float-left {
+  text-align: left;
+  width:50%;
+}
+
+input {
+  border: none;
+  width:auto;
+  padding:0;
+}
+
+.small-wide {
+  width:33px;
+}
+
+.new-beer-info{
+  list-style: none;
+}
+
+@media only screen and (max-width: 600px) {
+  .single-beer-properties-list li {
+    width: 100%;
+    text-align: left;
+  }
+}

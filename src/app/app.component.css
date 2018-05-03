@@ -1,75 +1,68 @@
-.beer-list-container, .add-beer-container {
+input {
+  margin: 0;
+}
+
+.beer-list-container {
+  background-color: #24397994;
+  padding: 15px;
   margin: auto;
 }
 
-.beer-list-container, .single-beer, .single-beer-information, .add-beer-container {
-  width: 85%;
-}
-
-.beer-header-info {
-  width:100%;
-}
 
 .single-beer-information {
   margin-bottom: 20px;
 }
 
-.single-beer-name {
-    width:80%;
-}
-.single-beer-price {
-  text-align:right;
-  width: 20%;
-}
-
-.single-beer-properties-list-container {
-  width: 100%;
-}
-
-.single-beer-properties-list {
-  margin: 0;
-  padding: 0;
-  width: 100%;
+.single-beer-properties-list{
+  padding:0;
 }
 
 .single-beer-properties-list li {
   float: left;
-  text-align: center;
-  width: 25%; /* fallback for non-calc() browsers */
+  width: 25%;
   list-style: none;
 }
 
-.float-right {
+.poured-pints {
   text-align: right;
-  width:50%;
-}
-.format-right {
-  text-align:right !important;
+  width:100%;
   margin-right:0;
+}
+
+.float-right, .float-right input {
+  text-align: right;
+  width:35%;
 }
 
 .float-left {
   text-align: left;
-  width:50%;
-}
-
-input {
-  border: none;
-  width:auto;
-  padding:0;
+  width:65%;
 }
 
 .small-wide {
   width:33px;
 }
 
-.new-beer-info{
-  list-style: none;
+.single-beer {
+  border: 3px solid #ff791a;
+  margin: 10px;
 }
 
-@media only screen and (max-width: 600px) {
+.legible-text {
+  background-color: #ff791a;
+  color:white;
+}
+
+.single-beer-information {
+  margin: 20px;
+}
+
+@media only screen and (max-width: 992px) {
   .single-beer-properties-list li {
     width: 100%;
     text-align: left;
+  }
+  .poured-pints {
+    text-align: right !important;
   }
 }

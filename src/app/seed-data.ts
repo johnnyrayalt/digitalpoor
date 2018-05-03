@@ -1,4 +1,4 @@
-export const beerList = [
+export const masterBeersList = [
   {
     name: 'Alt Bier',
     brand: "Widmer Brothers",

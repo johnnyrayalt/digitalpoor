@@ -1,50 +1,33 @@
 <div class="container">
   <h1>{{title}}</h1>
-
   <div class="beer-list-container">
-    <div class="single-beer" *ngFor="let beer of beers">
+    <div class="single-beer" *ngFor="let beer of childBeer">
       <div class="single-beer-information">
 
         <div class="row beer-header-info">
-          <input class="single-beer-name hide-box float-left" type="text" [(ngModel)]="beer.name">
+          <input class="single-beer-name  float-left" type="text" [(ngModel)]="beer.name">
           <label class="float-right">
-            $<input class="single-beer-price hide-box" type="text" [(ngModel)]="beer.price">
+            $<input type="text" [(ngModel)]="beer.price">
           </label>
         </div>
 
         <div class="row single-beer-properties-list-container">
           <ul class="single-beer-properties-list col-12">
-            <li><input class="hide-box" [(ngModel)]="beer.brand"></li>
-            <li><input class="hide-box" [(ngModel)]="beer.type"></li>
-            <li><input class="hide-box small-wide" [(ngModel)]="beer.alcContent">% ALC</li>
-            <li class="format-right">{{beer.pints}} pints left</li>
+            <li><input [(ngModel)]="beer.brand"></li>
+            <li><input [(ngModel)]="beer.type"></li>
+            <li><input class="small-wide" [(ngModel)]="beer.alcContent"><span class="legible-text">% ALC</span></li>
+            <li class="float-right poured-pints"><span class="legible-text">{{beer.pints}} pints left</span></li>
           </ul>
-          <input #newPintTotal>
-          <button (click)="pourPint(beer.pints, newPintTotal.value)">Pints poured</button>
+          <div class="poured-pints">
+            <input #newPintTotal>
+            <button (click)="pourPint(beer.pints, newPintTotal.value)">Pints poured</button>
+          </div>
         </div>
 
       </div>
 
     </div>
   </div>
-  <div class="add-beer-container row">
-    <h5 class="col-12">ADD BEER</h5>
-    <div class="add-beer-inputs">
-      <ul class="new-beer-info">
-        <li><input #newName class="hide-box" placeholder="Beer Name"></li>
-        <li><input #newBrand class="hide-box" placeholder="Brewer"></li>
-        <li><input #newType class="hide-box" placeholder="Type of beer"></li>
-        <li><input #newPrice class="hide-box" type="number" placeholder="Price"></li>
-        <li><input #newAlcContent class="hide-box" type="number" placeholder="Alcohol percentage"></li>
-      </ul>
-      <button (click)="addBeer(newName.value, newBrand.value, newType.value, newPrice.value, newAlcContent.value)">Add</button>
-    </div>
-  </div>
 
-
-
+  <app-add-beer [childBeer]="masterBeersList"></app-add-beer>
 </div>
-
-
-<!-- <input type="text" [(ngModel)]="currentBeer.name">
-<button (click)="editBeer(beer.name)">edit</button> -->

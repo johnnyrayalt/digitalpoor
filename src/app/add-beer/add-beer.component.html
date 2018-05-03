@@ -1,0 +1,13 @@
+<div class="add-beer-container row">
+  <h5 class="col-12">ADD BEER</h5>
+  <div class="add-beer-inputs">
+    <ul class="new-beer-info">
+      <li><input #newName placeholder="Beer Name"></li>
+      <li><input #newBrand placeholder="Brewer"></li>
+      <li><input #newType placeholder="Type of beer"></li>
+      <li><input #newPrice type="number" placeholder="Price"></li>
+      <li><input #newAlcContent type="number" placeholder="Alcohol percentage"></li>
+    </ul>
+    <button (click)="addBeer(newName.value, newBrand.value, newType.value, newPrice.value, newAlcContent.value)">Add</button>
+  </div>
+</div>

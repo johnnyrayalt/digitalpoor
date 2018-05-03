@@ -1,7 +1,7 @@
 <div class="container">
   <h1>{{title}}</h1>
   <div class="beer-list-container">
-    <div class="single-beer" *ngFor="let beer of childBeer">
+    <div class="single-beer" *ngFor="let beer of beers">
       <div class="single-beer-information">
 
         <div class="row beer-header-info">
@@ -29,5 +29,5 @@
     </div>
   </div>
 
-  <app-add-beer [childBeer]="masterBeersList"></app-add-beer>
+  <app-add-beer [childBeer]="masterBeersList" (clickSender)="addTap($event)"></app-add-beer>
 </div>

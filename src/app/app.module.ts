@@ -4,12 +4,14 @@ import { FormsModule }  from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { AddBeerComponent } from './add-beer/add-beer.component';
+import { PourAPintComponent } from './pour-a-pint/pour-a-pint.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    AddBeerComponent
+    AddBeerComponent,
+    PourAPintComponent
   ],
   imports: [
     BrowserModule,

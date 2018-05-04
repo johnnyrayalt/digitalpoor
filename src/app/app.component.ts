@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { Beer } from './models/beer.model';
 import { masterBeersList } from './seed-data';
 import { AddBeerComponent } from './add-beer/add-beer.component';
+import { PourAPintComponent } from './pour-a-pint/pour-a-pint.component'
 
 @Component({
   selector: 'app-root',
@@ -22,9 +23,5 @@ export class AppComponent {
   addTap(tap) {
     this.beers.push(tap);
   }
-  // pourPint(clickedBeer, currentTotal, newPintTotal) {
-  //   this.selecetedBeer = clickedBeer;
-  //   this.beers[0].pints = currentTotal - newPintTotal;
-  // }
 
 }

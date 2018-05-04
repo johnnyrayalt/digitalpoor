@@ -18,10 +18,7 @@
             <li><input class="small-wide" [(ngModel)]="beer.alcContent"><span class="legible-text">% ALC</span></li>
             <li class="float-right poured-pints"><span class="legible-text">{{beer.pints}} pints left</span></li>
           </ul>
-          <div class="poured-pints">
-            <input #newPintTotal>
-            <button (click)="pourPint(beer.pints, newPintTotal.value)">Pints poured</button>
-          </div>
+          <app-pour-a-pint [pintsPoured]="beer.pints" class="poured-pints"></app-pour-a-pint>
         </div>
 
       </div>
